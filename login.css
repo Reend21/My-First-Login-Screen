@@ -1,0 +1,188 @@
+/* Normalize */
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    opacity: 1;
+    filter: none;
+}
+    
+body {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+::selection {
+    background-color: gold;
+    color: rgb(17, 17, 17);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: xx-large;
+    text-decoration-thickness: 2px;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: gold;
+}
+
+
+.container {
+    background-color: rgb(39, 39, 39);
+    border: 7px solid gold;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 75vh;
+    flex-shrink: 0;
+}
+
+.input-boxes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    background-color: rgb(29, 29, 29);
+    color: gold;
+    border: 3px solid gold;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    width: 270px;
+    flex-shrink: 0;
+}
+
+input[type="text"]:focus {
+    transition: 250ms all;
+    box-shadow: 5px 5px 40px gold;
+    transform: scale(1.05);
+}
+
+input[type="text"]:not(:focus) {
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0);
+    transition: 500ms all;
+}
+
+input[type="password"] {
+    background-color: rgb(29, 29, 29);
+    color: gold;
+    border: 3px solid gold;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    width: 270px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+input[type="password"]:focus {
+    transition: 250ms all;
+    box-shadow: 5px 5px 40px gold;
+    transform: scale(1.05);
+}
+
+input[type="password"]:not(:focus) {
+    box-shadow: 0 0 0 rgba(0, 123, 255, 0);
+    transition: 500ms all;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+}
+
+/* Checkbox input'u gizleyin */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Checkmark stil ayarları */
+.checkmark {
+    width: 15px;
+    height: 15px;
+    border: 3px solid gold;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: rgb(29, 29, 29);
+    position: relative;
+    margin-right: 3px;
+    margin-bottom: 1px;
+}
+
+/* Checkmark'in içindeki işaret (tik) */
+.checkmark::after {
+    content: "^^";
+    color: gold;
+    opacity: 0;
+    color: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: monospace;
+    text-align: center;
+}
+
+
+/* Checkbox işaretli olduğunda checkmark'ın stilini değiştirin */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    opacity: 1;
+}
+
+.button-cont {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+button {
+    background-color: rgb(29, 29, 29);
+    color: gold;
+    border: 3px solid gold;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+
+/* Buton hover efekti! */
+button:hover { 
+    transition: 250ms all;
+    transform: scale(1.05);
+}
+
+/* Buton hover'dan çıkma efekti*/
+button:not(:hover) {
+    transform: scale(1.00);
+    transition: 250ms all;
+    
+}
+a {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(255, 217, 0);
+    text-decoration-style: wavy;
+    text-shadow: 1px 1px 99px gold;
+    color: rgb(255, 217, 0);
+    margin-left: 7px;
+}
